@@ -20,7 +20,7 @@ def get_rev_order(string):
         rev_order_list = []
         len_list = len(list_string)
         
-        # Create a Sequence That Iterates 0 - len(list) in reverse order    
+        # Create a Sequence That Iterates 0 to len(list) in reverse order    
         for x in range(len_list-1, -1, -1):
             # Append to rev_order_list each value in list that coincides to index = x
             rev_order_list.append(list_string[x])
@@ -96,7 +96,7 @@ def driver_function(string):
 
 
                     
-string = 'racecarannakayak'
+string = 'annanna'
 
 test = driver_function(string)                    
 
