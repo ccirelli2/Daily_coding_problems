@@ -28,12 +28,19 @@ def gen_list_ran_ints(num_ints, lower, upper):
 list_rand_nums = gen_list_ran_ints(100, 8, 200)
 
 
+# Identify Weights > 192 since any combination will always be > 200
+def eliminate_ints(list_ints):
+	Min_num_boats = 0
+	for weight in list_rand_nums:
+		if weight > 192:
+			list_ints.remove(weight)
+			Min_num_boats += 1
+	return (Min_num_boats, list_ints)
 
-for weight in list_rand_nums:
-	if weight > 192:
-		print(weight)
 
+test = eliminate_ints(list_rand_nums)
 
+print('Minimum number of boats => {}'.format(test[0]))
 
 
 
