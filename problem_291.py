@@ -19,6 +19,7 @@ import random
 # Create List of Randomly Generated Integers
 
 def gen_list_ran_ints(num_ints, lower, upper):
+	random.seed(3)
 	list_weights = []
 	for x in range(0, num_ints):
 		list_weights.append(random.randint(lower, upper))
@@ -28,7 +29,9 @@ list_rand_nums = gen_list_ran_ints(100, 8, 200)
 
 
 
-
+for weight in list_rand_nums:
+	if weight > 192:
+		print(weight)
 
 
 
