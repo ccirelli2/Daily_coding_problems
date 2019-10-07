@@ -26,7 +26,8 @@ def get_combinations(ran_weights):
 
         # Get Combintaions
         for step in range(0, len(ran_weights)):
-            a.append(ran_weights[0: step+1])
+            if sum(ran_weights[: step + 1]) < 201: 
+                a.append(ran_weights[0: step+1])
  
         # Rotate List so pos0 is not at the end
         pos_0 = ran_weights[0]

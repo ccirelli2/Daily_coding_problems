@@ -15,12 +15,12 @@ For example, given a population with weights [100, 200, 150, 80] and a boat limi
 # Import Modules
 import random
 import problem_291_module as m1
-
+from datetime import datetime
 
 # Weight Limitations
 min_weight = 8
 max_weight = 200
-num_people = 100
+num_people = 1000
 
 
 # Generate List of Random Weights. 
@@ -31,6 +31,8 @@ optimal_weights = []
 
 
 # Loop Over Range w/ Len Ran Weights
+start = datetime.now()
+
 while len(ran_weights) > 0:
     
     # Get All Possible Combinations of Weights
@@ -50,11 +52,12 @@ while len(ran_weights) > 0:
     except IndexError:
         print('Index Error')
 
+end   = datetime.now()
 
-print(len(optimal_weights))
-print(optimal_weights)
-
-
+print('Number of passengers => {}'.format(num_people))
+print('Optimal number of boats => {}'.format(len(optimal_weights)))
+function_time = end - start
+print('Function run time => {}'.format(function_time))
 
 
 
